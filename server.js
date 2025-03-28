@@ -20,6 +20,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use('/',(req,res)=>{
+  return res.send("this is test route")
+  
+  })
 app.use("/api/users", userRoutes);
 
 app.use("/api/products", (req, res) => {
